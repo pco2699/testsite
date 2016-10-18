@@ -1,0 +1,30 @@
+<div class="container">
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field form-group">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, :value => session["user_data"]["info"]["email"], autofocus: true %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, :value => session["user_data"]["info"]["name"] %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.label :skype_id %><br />
+    <%= f.text_field :skype_id %>
+  </div>
+
+  <%= f.hidden_field :uid, :value => session["user_data"]["uid"] %>
+  <%= f.hidden_field :provider, :value => session["user_data"]["provider"] %>
+
+  <div class="actions">
+    <%= f.submit "Sign up", :class => "btn btn-default" %>
+  </div>
+<% end %>
+
+</div>
