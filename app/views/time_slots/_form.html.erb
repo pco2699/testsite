@@ -1,0 +1,30 @@
+<div class="container">
+  <% @time_slot = TimeSlot.new %>
+<%= form_for(@time_slot, :html => {:class => "form-inline"}) do |f| %>
+  <% if @time_slot.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@time_slot.errors.count, "error") %> prohibited this time_slot from being saved:</h2>
+
+      <ul>
+      <% @time_slot.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= f.label :date_from %><br>
+    <%= f.datetime_select :date_from, {}, { :class => "form-control" } %>
+  </div>
+  <div class="field form-group">
+    <%= f.label :date_to %><br>
+    <%= f.datetime_select :date_to, {}, { :class => "form-control" } %>
+  </div>
+
+  <%= f.hidden_field :user_id, :value => current_user.id %>
+  <div class="actions">
+    <%= f.submit "Register", :class => "btn btn-default" %>
+  </div>
+<% end %>
+</div>
