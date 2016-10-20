@@ -30,12 +30,18 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Polingual</a>
+                    <a class="navbar-brand" href="/">Polingual</a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
                     <% if user_signed_in? %>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Search <span class="caret"></span></a>
+                        <div class="dropdown-menu" role="menu">
+                          <%= render 'time_slots/search' %>
+                        </div>
+                      </li>
                       <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Register <span class="caret"></span></a>
                         <div class="dropdown-menu" role="menu">
