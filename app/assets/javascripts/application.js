@@ -15,3 +15,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require moment
+//= require bootstrap-datetimepicker
+
+var data = {'data-date-format': 'YYYY-MM-DD hh:mm' };
+$(function(){
+  $('.datetimepicker').attr(data);
+  $('.datetimepicker').datetimepicker({
+    useCurrent: false,
+    stepping: 30
+  });
+});

@@ -14,13 +14,10 @@
 
   <div class="field form-group">
     <%= f.label "Date" %><br>
-    From:<%= f.datetime_select :date_from, { :use_month_numbers => true, :minute_step => 30 }, { :class => "form-control" } %>&nbsp;
-    To:<%= f.datetime_select :date_to, { :use_month_numbers => true, :minute_step => 30 }, { :class => "form-control" } %>
-  </div>
-
+    From:<%= f.text_field :date_from, { :class => "form-control datetimepicker" } %>&nbsp;
+    To:<%= f.text_field :date_to, { :class => "form-control datetimepicker" } %>
   <%= f.hidden_field :user_id, :value => current_user.id %>
-  <div class="actions">
-    <%= f.submit "Register", :class => "btn btn-default" %>
-  </div>
+  <%= f.submit "Register", :class => "btn btn-default" %>
+    </div>
 <% end %>
 </div>
