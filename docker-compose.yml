@@ -1,18 +1,15 @@
 version: '2'
 services:
   db:
-    image: mysql
-    environment:
-      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    image: postgres
   web:
     build: .
     command: bundle exec rails s -p 80 -b '0.0.0.0'
     volumes:
       - .:/myapp
-      - /etc/localtime:/etc/localtime:ro
     ports:
       - "80:80"
-    depends_on:
-      - db
     environment:
-      TZ: "JST-9"
+      TZ: JST-9
+    links:
+      - db
