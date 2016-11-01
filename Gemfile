@@ -37,6 +37,7 @@ gem 'omniauth-facebook'
 gem 'dotenv-rails'
 gem 'ransack'
 gem 'puma'
+gem 'jquery-turbolinks'
 
 gem 'momentjs-rails'
 gem 'bootstrap3-datetimepicker-rails'

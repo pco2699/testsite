@@ -13,11 +13,10 @@
   <% end %>
 
   <div class="field form-group">
-    <%= f.label "Date" %><br>
-    From:<%= f.text_field :date_from, { :class => "form-control datetimepicker" } %>&nbsp;
-    To:<%= f.text_field :date_to, { :class => "form-control datetimepicker" } %>
+    From:<%= f.text_field :date_from, { :class => "form-control register_from", :required => "true" } %>&nbsp;
+    To:<%= f.text_field :date_to, { :class => "form-control register_to", :required => "true" } %>
   <%= f.hidden_field :user_id, :value => current_user.id %>
-  <%= f.submit "Register", :class => "btn btn-default" %>
+  <%= f.submit "Register", :class => "btn btn-default search_btn" %>
     </div>
 <% end %>
 </div>
