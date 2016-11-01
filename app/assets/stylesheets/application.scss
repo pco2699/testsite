@@ -17,8 +17,8 @@
  *= require bootstrap-datetimepicker
  */
 
-@font-face {
-    font-family: 'Glyphicons Halflings';
-    src: font-url('/assets/glyphicons-halflings-regular.eot');
-    src: font-url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), font-url('/assets/glyphicons-halflings-regular.woff') format('woff'), font-url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), font-url('/assets/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
-  }
+ @font-face {
+   font-family: 'Glyphicons Halflings';
+   src: font-url(font-path('glyphicons-halflings-regular.eot'));
+   src: font-url(font-path('glyphicons-halflings-regular.eot?#iefix')) format('embedded-opentype'), font-url(font-path('glyphicons-halflings-regular.woff2')) format('woff2'), font-url(font-path('glyphicons-halflings-regular.woff')) format('woff'), font-url(font-path('glyphicons-halflings-regular.ttf')) format('truetype'), font-url(font-path('glyphicons-halflings-regular.svg#glyphicons_halflingsregular')) format('svg');
+ }
