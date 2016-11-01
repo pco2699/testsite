@@ -1,4 +1,29 @@
 <div class="container">
-<p id="notice"><%= notice %></p>
+    <p id="notice"><%= notice %></p>
+    <!-- Title -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h3>Search Result</h3>
+        </div>
+    </div>
+    <!-- /.row -->
 
-</div>
+    <!-- Page Features -->
+    <div class="row text-center">
+    <% @time_slots.each do |time_slot| %>
+        <div class="col-md-3 col-sm-6 hero-feature">
+            <div class="thumbnail">
+                <img src="http://placehold.it/800x500" alt="">
+                <div class="caption">
+                    <h3><%= time_slot.user.name %></h3>
+                    <p class="datep">From:<%= time_slot.date_from.to_s(:simple) %></p>
+                    <p class="datep">To:<%= time_slot.date_to.to_s(:simple) %></p>
+                    <p>
+                        <a href="#" class="btn btn-primary">Reserve</a>
+                        <a href="#" class="btn btn-default">More Info</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    <% end %>
+    </div>

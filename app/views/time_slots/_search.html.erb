@@ -1,9 +1,8 @@
 <div class="container">
   <%= search_form_for @time_slot_for_search, :html => {:class => "form-inline"} do |f| %>
   <div class="field form-group">
-    <%= f.label "Date" %><br>
-    From:<%= f.text_field :date_from, { :class => "form-control datetimepicker" } %>&nbsp;
-    To:<%= f.text_field :date_to, { :class => "form-control datetimepicker" } %>
+    From:<%= f.text_field :date_from, { :class => "form-control search_from" , :required => "true"} %>&nbsp;
+    To:<%= f.text_field :date_to, { :class => "form-control search_to", :required => "true" } %>
   <%= f.hidden_field :user_id, :value => current_user.id %>
   <%= f.submit "Search", :class => "btn btn-default" %>
     </div>

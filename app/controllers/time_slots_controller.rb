@@ -12,7 +12,6 @@ class TimeSlotsController < ApplicationController
   # GET /time_slots/1
   # GET /time_slots/1.json
   def show
-    byebug
     @timeslot = TimeSlot.find(params[:id])
   end
 
@@ -34,7 +33,7 @@ class TimeSlotsController < ApplicationController
         format.html { redirect_to @time_slot, notice: 'Time slot was successfully created.' }
         format.json { render :show, status: :created, location: @time_slot }
       else
-        format.html { render :new }
+        format.html { redirect_to :back }
         format.json { render json: @time_slot.errors, status: :unprocessable_entity }
       end
     end
